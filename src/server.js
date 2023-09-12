@@ -29,13 +29,13 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({extended:false}))
 // app.use(bodyParser.json())
-// app.use(cors({
-//     origin: ['http://localhost:3002','https://parach-mgt.vercel.app'],
-//     credentials:true
-// }))
+app.use(cors({
+    origin: ['http://localhost:3002','https://parach-mgt.vercel.app'],
+    credentials:true
+}))
 
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
-const PORT =  6000
+const PORT =  5000
 
 // //Routes middleware
 app.use('/api/users', userRoute)
